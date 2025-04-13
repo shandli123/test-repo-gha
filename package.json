@@ -3,6 +3,7 @@
     "crypto": "^1.0.1",
     "csv-parser": "^3.0.0",
     "mysql2": "^3.11.0",
+    "http-server": "^0.12.3",
     "selenium-webdriver": "^4.29.0"
   }
 }
