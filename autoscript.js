@@ -1,4 +1,4 @@
-var webdriver = require('selenium-webdriver');
+import webdriver from 'selenium-webdriver';
 
 var capabilities = {
   browserName: 'firefox',
