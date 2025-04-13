@@ -1,4 +1,4 @@
-const { Builder } = require('selenium-webdriver');
+const webdriver = require('selenium-webdriver');
 
 // const capabilities = {
 //   browserName: 'firefox',
