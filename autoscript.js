@@ -16,9 +16,17 @@ var driver = new webdriver.Builder()
   .withCapabilities(capabilities)
   .build();
 
-driver.get('http://localhost:8099').then(function () {
-  driver.getTitle().then(function (title) {
-    console.log(title);
-    driver.quit();
-  });
-});
+try {
+    console.log('Started execution');
+    await driver.get('https://www.google.com/');
+    await driver.get('https://www.twitter.com');
+    console.log('Finished execution');
+    
+    await new Promise(resolve => setTimeout(resolve, 60000));
+  } catch (error) {
+    await driver.executeScript(
+      'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed", "reason": "Some elements failed to load"}}'
+    );
+  } finally {
+    await driver.quit();
+  }
