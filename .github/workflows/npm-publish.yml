@@ -37,7 +37,7 @@ jobs:
       - name: 'running http-server'
         run: './node_modules/.bin/http-server -p 8099 &'
       - name: 'run test'
-        run: 'node index.js'
+        run: 'node autoscript.js'
 
   # publish-npm:
   #   needs: build
