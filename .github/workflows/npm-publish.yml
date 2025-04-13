@@ -22,7 +22,14 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm autoscript
+      - run: node autoscript
+
+      - name: 'BrowserStack Env Setup'
+        uses: 'browserstack/github-actions/setup-env@master'
+        with:
+          username:  ${{ secrets.BROWSERSTACK_USERNAME }}
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+          build-name: BUILD_INFO
 
   # publish-npm:
   #   needs: build
