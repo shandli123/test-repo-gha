@@ -7,7 +7,7 @@ var capabilities = {
     os_version: 'Sonoma',
     name: 'BStack-[NodeJS] Sample Test',
     build: process.env.BROWSERSTACK_BUILD_NAME,
-    project: process.env.BROWSERSTACK_PROJECT_NAME
+    // project: process.env.BROWSERSTACK_PROJECT_NAME
   }
 };
 
