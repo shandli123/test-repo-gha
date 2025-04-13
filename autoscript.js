@@ -2,6 +2,7 @@ import webdriver from 'selenium-webdriver';
 
 var capabilities = {
   browserName: 'firefox',
+  project: process.env.BROWSERSTACK_PROJECT_NAME,
   'bstack:options': {
     os: 'OS X',
     os_version: 'Sonoma',
