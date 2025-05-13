@@ -25,7 +25,7 @@ jobs:
       # - run: node autoscript
 
       - name: 'BrowserStack Env Setup'
-        uses: 'browserstack/github-actions/browserstack-report-action@shandli123:CAD_REORTING'
+        uses: 'browserstack/github-actions/browserstack-report-action@CAD_REORTING'
         with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
