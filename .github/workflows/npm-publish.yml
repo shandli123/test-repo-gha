@@ -23,14 +23,6 @@ jobs:
       #     node-version: 20
       # - run: npm ci
       # - run: node autoscript
-
-      - name: 'CAD Report'
-        uses: 'shandli123/github-actions/browserstack-report-action@CAD_REORTING'
-        with:
-          username:  ${{ secrets.BROWSERSTACK_USERNAME }}
-          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          build-name: BUILD_INFO
-          report-timeout: 300
       - name: 'BrowserStack Env Setup'
         uses: 'shandli123/github-actions/setup-env@CAD_REORTING'
         with:
@@ -45,6 +37,13 @@ jobs:
         run: './node_modules/.bin/http-server -p 8099 &'
       - name: 'run test'
         run: 'node autoscript.js'
+      - name: 'CAD Report'
+        uses: 'shandli123/github-actions/browserstack-report-action@CAD_REORTING'
+        with:
+          username:  ${{ secrets.BROWSERSTACK_USERNAME }}
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+          build-name: BUILD_INFO
+          report-timeout: 40
 
 
   # publish-npm:
