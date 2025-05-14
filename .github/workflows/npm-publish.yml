@@ -46,6 +46,7 @@ jobs:
       - name: 'run test'
         run: 'node autoscript.js'
 
+
   # publish-npm:
   #   needs: build
   #   runs-on: ubuntu-latest
