@@ -17,8 +17,6 @@ var driver = new webdriver.Builder()
   .withCapabilities(capabilities)
   .build();
 
-
-
 try {
     console.log('Started execution');
     await driver.get('https://www.google.com/');
