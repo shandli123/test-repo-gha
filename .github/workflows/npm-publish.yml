@@ -44,7 +44,7 @@ jobs:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
           build-name: BUILD_INFO
-          report-timeout: 40
+          report-timeout: 10
           
 
 
