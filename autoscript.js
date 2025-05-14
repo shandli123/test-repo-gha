@@ -12,6 +12,7 @@ var capabilities = {
   }
 };
 
+
 var driver = new webdriver.Builder()
   .usingServer(`https://${process.env.BROWSERSTACK_USERNAME}:${process.env.BROWSERSTACK_ACCESS_KEY}@hub.browserstack.com/wd/hub`)
   .withCapabilities(capabilities)
