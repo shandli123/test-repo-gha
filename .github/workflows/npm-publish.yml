@@ -135,9 +135,9 @@ jobs:
             </body>
           </html>"  > $GITHUB_STEP_SUMMARY
 
-      - name: Upload HTML Report as Artifact
-        uses: actions/upload-artifact@v4
+      # - name: Upload HTML Report as Artifact
+      #   uses: actions/upload-artifact@v4
         
-        with:
-          name: custom-html-report
-          path: reports
+      #   with:
+      #     name: custom-html-report
+      #     path: reports
