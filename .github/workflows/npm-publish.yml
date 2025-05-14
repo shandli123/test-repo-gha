@@ -24,7 +24,7 @@ jobs:
       # - run: npm ci
       # - run: node autoscript
 
-      - name: 'BrowserStack Env Setup'
+      - name: 'CAD Report'
         uses: 'shandli123/github-actions/browserstack-report-action@CAD_REORTING'
         with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
