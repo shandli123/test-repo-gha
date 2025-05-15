@@ -142,4 +142,4 @@ jobs:
         
         with:
           name: custom-html-report
-          path: browserstack-artifacts/report.html
+          path: browserstack-artifacts/reporrt.html
