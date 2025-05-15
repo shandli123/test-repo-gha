@@ -104,7 +104,7 @@ jobs:
           </html>" > reports/index.html 
           echo "<html>
             <body> 
-              <details><summary>CAD Test Reorts</summary>
+              <details><summary>CAD Test Reports</summary>
                 <table>
                   <thead>
                       <tr>
