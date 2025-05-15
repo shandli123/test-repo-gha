@@ -38,20 +38,6 @@ jobs:
         run: './node_modules/.bin/http-server -p 8099 &'
       - name: 'run test'
         run: 'node autoscript.js'
-      - name: 'CAD Report'
-        uses: 'shandli123/github-actions/browserstack-report-action@CAD_REORTING'
-        with:
-          username:  ${{ secrets.BROWSERSTACK_USERNAME }}
-          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          build-name: BUILD_INFO
-          report-timeout: 2
-      - name: Upload HTML Report as Artifact
-        uses: actions/upload-artifact@v4
-
-        
-        with:
-          name: ${{ env.BROWSERSTACK_REPORT_NAME}}
-          path: ${{ env.BROWSERSTACK_REPORT_PATH}}
           
 
 
@@ -74,80 +60,16 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:     
-      - name: Generate fake HTML report
-        run: |
-          mkdir -p reports
-          echo "<html>
-            <body> 
-              <details><summary>CAD Test Reorts</summary>
-                <table>
-                  <thead>
-                      <tr>
-                          <th>Name</th>
-                          <th>Age</th>
-                          <th>City</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>Alex Johnson</td>
-                          <td>28</td>
-                          <td>New York</td>
-                      </tr>
-                      <tr>
-                          <td>Sophia Lee</td>
-                          <td>34</td>
-                          <td>Los Angeles</td>
-                      </tr>
-                      <tr>
-                          <td>Michael Smith</td>
-                          <td>25</td>
-                          <td>Chicago</td>
-                      </tr>
-                  </tbody>
-              </table>
-              </details>
-            </body>
-          </html>" > reports/index.html 
-          echo "<html>
-            <body> 
-              <details><summary>CAD Test Reports</summary>
-                <table>
-                  <thead>
-                      <tr>
-                          <th>Name</th>
-                          <th>Age</th>
-                          <th>City</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>Alex Johnson</td>
-                          <td>28</td>
-                          <td>New York</td>
-                      </tr>
-                      <tr>
-                          <td>Sophia Lee</td>
-                          <td>34</td>
-                          <td>Los Angeles</td>
-                      </tr>
-                      <tr>
-                          <td>Michael Smith</td>
-                          <td>25</td>
-                          <td>Chicago city</td>
-                      </tr>
-                  </tbody>
-              </table>
-              </details>
-            </body>
-          </html>"  > $GITHUB_STEP_SUMMARY
-
-          
-
-      # - name: Upload HTML Report as Artifact
-      #   uses: actions/upload-artifact@v4
-      
+       - name: 'CAD Report'
+         uses: 'shandli123/github-actions/browserstack-report-action@CAD_REORTING'
+         with:
+          username:  ${{ secrets.BROWSERSTACK_USERNAME }}
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+          build-name: BUILD_INFO
+          report-timeout: 2
+       - name: Upload HTML Report as Artifact
+         uses: actions/upload-artifact@v4
+         with:
+            name: ${{ env.BROWSERSTACK_REPORT_NAME}}
+            path: ${{ env.BROWSERSTACK_REPORT_PATH}}
         
-      #   with:
-      #     name: custom-html-report
-      #     path: browserstack-artifacts
