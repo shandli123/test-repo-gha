@@ -45,6 +45,12 @@ jobs:
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
           build-name: BUILD_INFO
           report-timeout: 2
+      - name: Upload HTML Report as Artifact
+        uses: actions/upload-artifact@v4
+        
+        with:
+          name: custom-html-report
+          path: browserstack-artifacts
           
 
 
