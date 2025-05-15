@@ -50,7 +50,7 @@ jobs:
 
         
         with:
-          name: custom-html-report
+          name: ${{ env.BROWSERSTACK_REPORT_NAME}}
           path: ${{ env.BROWSERSTACK_REPORT_PATH}}
           
 
