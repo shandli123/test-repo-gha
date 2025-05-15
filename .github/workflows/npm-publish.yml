@@ -51,7 +51,7 @@ jobs:
         
         with:
           name: custom-html-report
-          path: BROWSERSTACK_REPORT_PATH
+          path: ${{ env.BROWSERSTACK_REPORT_PATH}}
           
 
 
