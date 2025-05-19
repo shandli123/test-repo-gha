@@ -38,6 +38,7 @@ jobs:
         run: './node_modules/.bin/http-server -p 8099 &'
       - name: 'run test'
         run: 'node autoscript.js'
+        
           
 
   Bstack-test-report:
