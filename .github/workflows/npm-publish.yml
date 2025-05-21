@@ -60,4 +60,5 @@ jobs:
          with:
             name: ${{ env.BROWSERSTACK_REPORT_NAME}}
             path: ${{ env.BROWSERSTACK_REPORT_PATH}}
+         continue-on-error: true
         
