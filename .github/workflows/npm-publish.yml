@@ -37,13 +37,13 @@ jobs:
           
       - name: 'checkout the repository demo'
         uses: 'actions/checkout@v2'
-      # - name: 'running npm install'
-      #   run: 'npm install'
+      - name: 'running npm install'
+        run: 'npm install'
         
-      # - name: 'running http-server'
-      #   run: './node_modules/.bin/http-server -p 8099 &'
-      # - name: 'run test'
-      #   run: 'node autoscript.js'
+      - name: 'running http-server'
+        run: './node_modules/.bin/http-server -p 8099 &'
+      - name: 'run test'
+        run: 'node autoscript.js'
           
 
   Bstack-test-report:
@@ -52,7 +52,7 @@ jobs:
     
     steps:     
        - name: 'CAD Report'
-         uses: 'shandli123/github-actions/browserstack-report-action@MOCK_REPORT_GENERATION'
+         uses: 'shandli123/github-actions/browserstack-report-action@CAD_REORTING'
          with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
