@@ -52,7 +52,7 @@ jobs:
     
     steps:     
        - name: 'CAD Report'
-         uses: 'shandli123/github-actions/browserstack-report-action@CAD_REORTING'
+         uses: 'shandli123/github-actions/browserstack-report-action@MOCK_REPORT_GENERATION'
          with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
