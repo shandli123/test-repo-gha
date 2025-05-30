@@ -46,7 +46,7 @@ jobs:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
           build-name: BUILD_INFO
-          report-timeout: 20
+          report-timeout: 2000
       - name: Upload HTML Report as Artifact
         uses: actions/upload-artifact@v4
         with:
