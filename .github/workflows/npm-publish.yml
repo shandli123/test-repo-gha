@@ -25,7 +25,7 @@ jobs:
       # - run: npm ci
       # - run: node autoscript
       - name: 'BrowserStack Env Setup'
-        uses: 'shandli123/github-actions/setup-env@CAD_REORTING'
+        uses: 'browserstack/github-actions/setup-env@master'
         with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
@@ -41,12 +41,12 @@ jobs:
       - name: 'run test'
         run: 'node autoscript.js'
       - name: 'CAD Report'
-        uses: 'shandli123/github-actions/browserstack-report-action@CAD_REORTING'
+        uses: 'browserstack/github-actions/browserstack-report-action@master'
         with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
           build-name: BUILD_INFO
-          report-timeout: 2000
+          report-timeout: 20
       - name: Upload HTML Report as Artifact
         uses: actions/upload-artifact@v4
         with:
